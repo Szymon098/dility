@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="nav-element title">
+    <p>Dility</p>
+  </div>
+
+  <div class="nav-element start">
+    <a routerLink="/details" routerLinkActive="active">Workdays</a>
+  </div>
+
+  <div class="nav-element add-workday">
+    <a routerLink="/add-workday" routerLinkActive="active" (click)="clearDate()">Add Workday</a>
+  </div>
+
+
+  <div class=" nav-element add-employee">
+    <a routerLink="/add-employees" routerLinkActive="active" (click)="clearDate()">Add Employees</a>
+  </div>
+
+  <div class=" nav-element about">
+    <a routerLink="/about" routerLinkActive="active" (click)="clearDate()">About</a>
+  </div>
+
+  <div class="nav-element date" *ngIf="isDateProper()">
+    <p>{{workdayDate | date: 'd.MM.yyyy'}}</p>
+  </div>
+</nav>

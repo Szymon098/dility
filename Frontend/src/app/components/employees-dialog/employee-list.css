@@ -1,0 +1,16 @@
+table{
+    width: 100%;
+}
+
+.container{
+    margin-bottom: 10%;
+}
+
+mat-dialog-content{
+    padding-bottom: 5%;
+}
+  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}

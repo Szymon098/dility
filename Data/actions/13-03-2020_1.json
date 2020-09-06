@@ -1,0 +1,244 @@
+{
+  "date": "2020-03-13T16:52:10.414Z",
+  "usersActions": [
+    {
+      "employeeId": 15386,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 2,
+          "type": "dodanie"
+        },
+        {
+          "hour": 3,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 4,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 7,
+          "type": "przesuniecie"
+        }
+      ]
+    },
+    {
+      "employeeId": 58125,
+      "actions": [
+        {
+          "hour": 3,
+          "type": "dodanie"
+        },
+        {
+          "hour": 4,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 5,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 6,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 7,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 8,
+          "type": "dodawanie"
+        }
+      ]
+    },
+    {
+      "employeeId": 24452,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "dodanie"
+        },
+        {
+          "hour": 2,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 4,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 5,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 6,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 7,
+          "type": "usuwanie"
+        },
+        {
+          "hour": 8,
+          "type": "dodawanie"
+        }
+      ]
+    },
+    {
+      "employeeId": 34954,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "dodanie"
+        },
+        {
+          "hour": 2,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 4,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 5,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 6,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 7,
+          "type": "usuwanie"
+        },
+        {
+          "hour": 8,
+          "type": "dodawanie"
+        }
+      ]
+    },
+    {
+      "employeeId": 21934,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "dodanie"
+        },
+        {
+          "hour": 2,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "przesuwanie"
+        },
+        {
+          "hour": 4,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 5,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 6,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 7,
+          "type": "usuwanie"
+        },
+        {
+          "hour": 8,
+          "type": "dodawanie"
+        }
+      ]
+    },
+    {
+      "employeeId": 39454,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "dodanie"
+        },
+        {
+          "hour": 2,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 4,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 5,
+          "type": "usuwanie"
+        },
+        {
+          "hour": 6,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 7,
+          "type": "usuwanie"
+        },
+        {
+          "hour": 8,
+          "type": "dodawanie"
+        }
+      ]
+    },
+    {
+      "employeeId": 20443,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "dodanie"
+        },
+        {
+          "hour": 2,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "przesuwanie"
+        },
+        {
+          "hour": 4,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 5,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 6,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 7,
+          "type": "usuwanie"
+        },
+        {
+          "hour": 8,
+          "type": "dodawanie"
+        }
+      ]
+    }
+  ]
+}

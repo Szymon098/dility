@@ -1,0 +1,132 @@
+.container{
+    position: relative;
+}
+
+.panels-container{
+    margin-top: 10%;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.note{
+    opacity: 0.6;
+    font-size: 0.8vw;
+}
+
+.day-note{
+    font-size: 1vw;
+    color: red;
+    margin-top: -1%;
+}
+
+.add-employee-button{
+    margin-top: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+}
+
+.title-panel{
+    display:block-inline;
+    padding: 1%;
+    color: black;
+    font-size: 0.9vw;
+}
+
+.employee-panel{
+    display:block-inline;
+    padding: 2%;
+    opacity: 0.85;
+    font-size: 0.8vw;
+
+}
+
+.name{
+    width: 25%;
+    text-align: center;
+}
+
+.surname{
+    width: 25%;
+    text-align: center;
+}
+
+.identifier{
+    width: 25%;
+    text-align: center;
+}
+
+.tip{
+    opacity: 0.6;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.extended-panel-container{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1%;
+}
+
+.submit{
+    display: block;
+    margin-left: auto;
+    margin-bottom: 10%;
+}
+
+.submit-container{
+    width: 75%;
+}
+
+mat-spinner{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.right-side-panel{
+    width: 50%;
+    grid-column: 5;
+    grid-row: 1;
+    display: grid;   
+}
+
+.left-side-panel{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+mat-form-field{ 
+    width: 50%;
+}
+
+mat-list{
+    height: 70%;
+    position: absolute;
+    overflow: auto;
+}
+
+.top-list-container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.list-description-left{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.date-container-right{
+    display: inline-block;
+    grid-row: 1;
+    grid-column: 10;
+}
+

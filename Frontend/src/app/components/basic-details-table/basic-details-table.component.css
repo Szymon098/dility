@@ -1,0 +1,46 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 15%; 
+  }
+ 
+  tr.expandable-element {
+    height: 0;
+  }
+  
+  tr.element-row:not(.expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.element-row:not(.expanded-row):active {
+    background: #efefef;
+  }
+  
+  .element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .expanded-element{
+    overflow: hidden;
+  }
+
+  .no-data-error{
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .date-picker{
+    display: block;
+    width: 85%;
+    height: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+
+  mat-spinner{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}

@@ -1,0 +1,165 @@
+{
+  "date": "2020-03-12T16:52:10.414Z",
+  "usersActions": [
+    {
+      "employeeId": 15386,
+      "actions": [
+        {
+          "hour": 2,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 2,
+          "type": "dodanie"
+        },
+        {
+          "hour": 2,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 4,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 4,
+          "type": "usuwanie"
+        },
+        {
+          "hour": 5,
+          "type": "przesuwanie"
+        },
+        {
+          "hour": 5,
+          "type": "przesuwanie"
+        },
+        {
+          "hour": 6,
+          "type": "przesuwanie"
+        },
+        {
+          "hour": 7,
+          "type": "przesuwanie"
+        },
+        {
+          "hour": 8,
+          "type": "przesuwanie"
+        }
+      ]
+    },
+    {
+      "employeeId": 58125,
+      "actions": [
+        {
+          "hour": 3,
+          "type": "dodanie"
+        },
+        {
+          "hour": 4,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 4,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 5,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 6,
+          "type": "dodanie"
+        },
+        {
+          "hour": 7,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 8,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 8,
+          "type": "przesuniecie"
+        }
+      ]
+    },
+    {
+      "employeeId": 84211,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 3,
+          "type": "przesuniecie"
+        },
+        {
+          "hour": 5,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 6,
+          "type": "dodanie"
+        },
+        {
+          "hour": 7,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 8,
+          "type": "usuniecie"
+        },
+        {
+          "hour": 8,
+          "type": "usuniecie"
+        }
+      ]
+    },
+    {
+      "employeeId": 72677,
+      "actions": [
+        {
+          "hour": 1,
+          "type": "dodanie"
+        },
+        {
+          "hour": 2,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 3,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 4,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 5,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 6,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 7,
+          "type": "dodawanie"
+        },
+        {
+          "hour": 8,
+          "type": "przesuniecie"
+        }
+      ]
+    }
+  ]
+}
