@@ -1,26 +1,26 @@
-<nav class="navbar">
-  <div class="nav-element title">
-    <p>Dility</p>
-  </div>
+<header class="navbar">
+  <h1 class="logo"><span>Dil</span>ity</h1>
+  <button class="menu-btn" mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
 
-  <div class="nav-element start">
-    <a routerLink="/details" routerLinkActive="active">Workdays</a>
-  </div>
+  <nav>
+    <ul>
+      <li><a routerLink="/details" routerLinkActive="active">Workdays</a></li>
+      <li><a routerLink="/add-workday" routerLinkActive="active" (click)="clearDate()">Add Workday</a></li>
+      <li><a routerLink="/add-employees" routerLinkActive="active" (click)="clearDate()">Add Employees</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="clearDate()">About</a></li>
+    </ul>
+  </nav>
 
-  <div class="nav-element add-workday">
-    <a routerLink="/add-workday" routerLinkActive="active" (click)="clearDate()">Add Workday</a>
+  <div class="workday-date">
+    <h3>{{workdayDate | date: 'd.MM.yyyy'}}</h3>
   </div>
+</header>
 
-
-  <div class=" nav-element add-employee">
-    <a routerLink="/add-employees" routerLinkActive="active" (click)="clearDate()">Add Employees</a>
-  </div>
-
-  <div class=" nav-element about">
-    <a routerLink="/about" routerLinkActive="active" (click)="clearDate()">About</a>
-  </div>
-
-  <div class="nav-element date" *ngIf="isDateProper()">
-    <p>{{workdayDate | date: 'd.MM.yyyy'}}</p>
-  </div>
-</nav>
+<mat-menu [class]="'nav-menu'" #menu="matMenu">
+  <a mat-menu-item routerLink="/details" routerLinkActive="active">Workdays</a>
+  <a mat-menu-item routerLink="/add-workday" routerLinkActive="active" (click)="clearDate()">Add Workday</a>
+  <a mat-menu-item routerLink="/add-employees" routerLinkActive="active" (click)="clearDate()">Add Employees</a>
+  <a mat-menu-item routerLink="/about" routerLinkActive="active" (click)="clearDate()">About</a>
+</mat-menu>

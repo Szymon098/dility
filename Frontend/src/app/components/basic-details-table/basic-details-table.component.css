@@ -1,21 +1,41 @@
-table {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-top: 5%;
-    margin-bottom: 15%; 
+  *{
+    font-size: 1.2rem;
   }
- 
+  .container{
+    position: relative; 
+    top: 100px;
+    width: 80%;
+    margin: auto;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+  }
+
+  @media(max-width: 768px){
+    *{
+      font-size: 0.7rem;
+    }
+    .container{
+      width: 95%;
+
+    }
+  }
+
+ /* angular tables */
   tr.expandable-element {
     height: 0;
   }
   
   tr.element-row:not(.expanded-row):hover {
-    background: whitesmoke;
+    background: fff;
   }
   
   tr.element-row:not(.expanded-row):active {
-    background: #efefef;
+    background: #fff;
   }
   
   .element-row td {
@@ -25,22 +45,3 @@ table {
   .expanded-element{
     overflow: hidden;
   }
-
-  .no-data-error{
-    text-align: center;
-    margin-top: 10%;
-  }
-
-  .date-picker{
-    display: block;
-    width: 85%;
-    height: 5%;
-    padding-left: 5%;
-    padding-top: 5%;
-  }
-
-  mat-spinner{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-}

@@ -1,28 +1,28 @@
 <div [className]="employeeDetails?.leastPerformedType != employeeDetails?.mostPerformedType ?
-     'container-four-elements' : 'container-three-elements'">
-    <div class="title">Efficiency</div>
-    <div class="title"> Performed minutes</div>
-    <div class="title"> Least performed type</div>
+     'container container-four-elements' : 'container container-three-elements'">
+    <div class="header top">Efficiency</div>
+    <div class="header top"> Performed minutes</div>
+    <div class="header bottom"> Most performed type</div>
 
-    <div class="detail-value efficiency">
+    <div class="value top efficiency">
         {{employeeDetails?.efficiency | percent}}
     </div>
 
-    <div class="detail-value performed-minutes">
+    <div class="value top performed-minutes">
         {{employeeDetails?.performedMinutes}}
     </div>
 
-    <div class="detail-value least-performed-type">
-        {{actionType[employeeDetails?.leastPerformedType]}}
+    <div class="value bottom most-performed-type">
+        {{actionType[employeeDetails?.mostPerformedType]}}
     </div>
 
     <ng-container *ngIf="employeeDetails?.leastPerformedType != employeeDetails?.mostPerformedType">
-        <div class="title">
-            Most performed type
+        <div class="header bottom">
+            Least performed type
         </div>
 
-        <div class="detail-value most-performed-type">
-            {{actionType[employeeDetails?.mostPerformedType]}}
+        <div class="value bottom least-performed-type">
+            {{actionType[employeeDetails?.leastPerformedType]}}
         </div>
     </ng-container>
 </div>
