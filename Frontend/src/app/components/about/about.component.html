@@ -1,9 +1,62 @@
-<p>
-    Aplikacja na podstawie listy pracowników, wraz z czynnościami które wykonywali w danych dniu oblicza ich wydajność a
-    także kilka innych szczegółów jak np. przepracowane minuty (aplikacja ma przypisane dla każdej z aktualnie używanych
-    przeze mnie czynności czas potrzebny na ich wykonanie).
-    Dane przechowywane są w bazie danych SQL, oraz plikach w katalogu "Data". Dane można tworzyć z poziomu aplikacji po
-    czym dodawane są do bazy danych,
-    a także generowane są odpowiednie pliki.
-    Przetworzone dane można wyświetlić w zakładce "Workdays".
-</p>
+<div class="container">
+    <div class="main">
+
+        <h2>
+            <mat-icon>description</mat-icon> Features
+        </h2>
+        <p>
+            Dility is a small web application, whose main feature is calculating daily efficiency of employees.
+            Application calculates efficiency based on tasks, whose employees performed during workday. Every task
+            has given time to perform, actually application supports three example tasks (add, delete, move).
+            Data is stored in MSSQL database and as csv, json files stored in "Data" folder. Initially there is created
+            manually data from 14-03-2020.
+        </p>
+        <p>
+            Workdays are created manually, by filling form in "Add Workday" tab - choosing date, employees working that
+            day and
+            tasks their performed.Workday is saved in database and proper files are generated.
+            Insertion of new employees is possible in "Add Employees" tab.
+        </p>
+        <p>
+            In "Workdays" are displayed existing workdays. Application automatically finds last workday and
+            calculates
+            efficiency and few other things about actions performed by employees.
+            We can change day with data picker.
+        </p>
+    </div>
+
+    <div class="technologies">
+        <h2>
+            <mat-icon>build</mat-icon>Technologies and tools
+        </h2>
+
+        <ul>
+            <li>
+                <mat-icon>chevron_right</mat-icon>Angular
+            </li>
+            <li>
+                <mat-icon>chevron_right</mat-icon>HTML/CSS
+            </li>
+            <li>
+                <mat-icon>chevron_right</mat-icon>ASP.NET CORE API
+            </li>
+            <li>
+                <mat-icon>chevron_right</mat-icon>MSSQL
+            </li>
+            <li>
+                <mat-icon>chevron_right</mat-icon>EntityFramework
+            </li>
+            <li>
+                <mat-icon>chevron_right</mat-icon>Github
+            </li>
+            <li>
+                <mat-icon>chevron_right</mat-icon>Visual Studio Code
+            </li>
+            <li>
+                <mat-icon>chevron_right</mat-icon>Visual Studio
+            </li>
+
+        </ul>
+
+    </div>
+</div>

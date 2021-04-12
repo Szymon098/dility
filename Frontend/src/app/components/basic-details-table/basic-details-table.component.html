@@ -1,4 +1,4 @@
-<mat-spinner *ngIf="displayLoading" class="spinner"></mat-spinner>
+<mat-spinner *ngIf="displayLoading" class="loading"></mat-spinner>
 
 <section class="container">
   <div class="date-picker">
@@ -34,8 +34,9 @@
     <tr mat-row *matRowDef="let row;
    columns: ['expandedDetail']" class="expandable-element"></tr>
   </table>
-
-  <h1 *ngIf="displayError" class="no-data-error">
-    <p>{{ errorAlert }}</p>
-  </h1>
 </section>
+<div *ngIf="displayError" class="no-data-error">
+  <h1>
+    {{ errorAlert }}
+  </h1>
+</div>

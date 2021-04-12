@@ -1,7 +1,45 @@
-p{
-    padding: 2%;
-    margin-left: auto;
-    margin-right: auto;
+p, li{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+h2{
+    font-size: 28px;
+    padding: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+mat-icon{
+    color: #2196F3;
+}
+.container{
+    position: relative;
+    top: 150px;
     width: 80%;
-    font-size: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 40px;
+    margin: auto;
+    padding: 30px;
+}
+
+@media(max-width: 840px){ 
+    p, li, h2{
+        font-size-adjust: unset;
+    }
+
+    .container{
+        width: 100%;
+        top: 100px;
+    }
 }

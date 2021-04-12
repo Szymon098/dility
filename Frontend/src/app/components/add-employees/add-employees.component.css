@@ -1,23 +1,22 @@
-.container{
-    text-align :center;
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 60%;
-}
-
-mat-form-field{
-    padding: 1%;
-    margin-top: 1%;
-}
-
-h3{
-    margin-bottom: 3%;
-}
-
 .error{
     color: red;
-    margin-top: -2%;
-    font-size: 1vw;
+    justify-self: flex-start;
+    font-size: 14px;
+}
+
+.container{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    top: 200px;
+}
+
+.container h2{
+    padding: 20px;
+}
+
+.mat-flat-button{
+    background: #2196F3;
 }

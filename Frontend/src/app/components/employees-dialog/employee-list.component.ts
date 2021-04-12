@@ -6,12 +6,12 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
     selector: 'employees-list',
-    templateUrl: 'employees-list.html',
+    templateUrl: './employees-list.html',
     styleUrls: ['./employee-list.css']
 })
 
 export class EmployeesDialogTable implements OnInit {
-    displayedColumns: string[] = ['FirstName', 'LastName', 'Identifier', ' '];
+    displayedColumns: string[] = ['Fullname', 'Identifier', 'btn'];
     employees: Employee[];
     dataSource: MatTableDataSource<Employee>;
 

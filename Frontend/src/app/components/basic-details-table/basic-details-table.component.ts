@@ -41,24 +41,37 @@ export class BasicDetailsTable implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.loadEmployeesBasicDetails();
+    setTimeout(() =>
+      this.loadEmployeesBasicDetails()
+      , 500);
   }
 
   loadEmployeesBasicDetails() {
     var thereAreDataFromLastAddedFile = this._activatedRoute.snapshot.paramMap.get('getDataFromLastAddedFile');
 
-    if (thereAreDataFromLastAddedFile)
+    if (thereAreDataFromLastAddedFile) {
       this.loadEmployeesBasicDetailsFromLastAddedFile();
-    else
+    }
+    else {
       this.loadNewestBasicDetails();
+    }
   }
 
   async loadNewestBasicDetails() {
-    const result = await this._httpDetailsService.getNewestEmployeesBasicDetails();
-    if (result)
+    // var result = await this._httpDetailsService.getNewestEmployeesBasicDetails().then(result =>
+    await this._httpDetailsService.getNewestEmployeesBasicDetails().then(result => {
       this.setVariablesWhenSuccess(result);
-    else
+    }).catch(err => {
       this.setConnectionError();
+    });
+
+    // if (result) {
+    //   this.setVariablesWhenSuccess(result);
+    // }
+    // else {
+    //   this.setConnectionError();
+    // }
+
   }
 
   async loadEmployeesBasicDetailsFromLastAddedFile() {
@@ -85,7 +98,7 @@ export class BasicDetailsTable implements OnInit {
   setEmptyDateError() { // used when day is not saved in database then api returns empty day
     this.employeesBasicDetailsOnDay = null;
     this.displayError = true;
-    this.errorAlert = "No data from this day"
+    this.errorAlert = "No data from this day";
   }
 
   setConnectionError() { //used when there's no connection with api 

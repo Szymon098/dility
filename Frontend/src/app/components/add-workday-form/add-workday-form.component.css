@@ -1,132 +1,137 @@
+* > btn{
+    color: #333;
+    font-size: 1.1vw;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
 .container{
     position: relative;
-}
-
-.panels-container{
-    margin-top: 10%;
     width: 60%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    align-items: center;
+    align-content:space-between;
+    text-align: center;
+    top: 200px;
+    padding: 20px;
+    gap: 20px;
 }
 
-.note{
-    opacity: 0.6;
-    font-size: 0.8vw;
+.container .panel{
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+
+.date{
+    place-self: start;
+}
+
+.container .panel .panel-elements{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.container .panel .panel-elements .remove-btn{
+    color: #1565C0;
+    margin-left: auto;
+}
+.container .panel .panel-elements .element{
+    width: 30%;
+}
+
+.extended-panel{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .day-note{
-    font-size: 1vw;
     color: red;
-    margin-top: -1%;
+    padding: 0;
 }
 
-.add-employee-button{
-    margin-top: 2%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3%;
+.flex-left{
+    place-self: start;
 }
 
-.title-panel{
-    display:block-inline;
-    padding: 1%;
-    color: black;
-    font-size: 0.9vw;
+.remove{
+    color: rgb(170, 4, 4);
 }
 
-.employee-panel{
-    display:block-inline;
-    padding: 2%;
-    opacity: 0.85;
-    font-size: 0.8vw;
-
+.add{
+    background: #28a745 ;
+    color: #fff;
 }
 
-.name{
-    width: 25%;
-    text-align: center;
+.add-icon{
+    color: #fff;
 }
 
-.surname{
-    width: 25%;
-    text-align: center;
+.add-btn{
+    margin-left:auto;
 }
-
-.identifier{
-    width: 25%;
-    text-align: center;
+.add-employee{
+    background-color:#2196F3;
 }
-
-.tip{
-    opacity: 0.6;
-}
-
-h1{
-    text-align: center;
-    margin-top: 10%;
-}
-
-.extended-panel-container{
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    height: 1%;
-}
-
-.submit{
-    display: block;
-    margin-left: auto;
-    margin-bottom: 10%;
-}
-
-.submit-container{
-    width: 75%;
-}
-
-mat-spinner{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-}
-
-.right-side-panel{
-    width: 50%;
-    grid-column: 5;
-    grid-row: 1;
-    display: grid;   
-}
-
-.left-side-panel{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-mat-form-field{ 
-    width: 50%;
+.btn:hover:enabled{
+    opacity: 0.8;
 }
 
 mat-list{
-    height: 70%;
-    position: absolute;
-    overflow: auto;
+    width: 120px;
+    height: 200px;
+    overflow: auto; 
+    text-align: center;
+}
+mat-list-item:hover{
+    color: #fff;
+    background: #2196F3;
+    opacity: 0.3;
 }
 
-.top-list-container{
-    display: grid;
-    width: 100%;
-    height: 100%;
+.tip{
+    color: #333;
+    font-size: 12px;
+    opacity: 0.8;
 }
 
-.list-description-left{
-    grid-column: 1;
-    grid-row: 1;
+.info{
+    margin: auto;
+    color: #333;
+    padding: 10px;
 }
 
-.date-container-right{
-    display: inline-block;
-    grid-row: 1;
-    grid-column: 10;
+.title p{
+    font-size: 15px;
+    color: black;
+    opacity: 0.8;
 }
+/* mobile */
+ @media(max-width: 840px){ 
+    .container, .container .panel{
+        width: 95%;
+        padding: 0px;
+        font-size: 1rem;
+    }
 
+    .container .panel{
+        width: 100%;
+    }
+    .extended-panel{
+        flex-direction: column;
+    }
+    .container .panel .panel-elements{
+        padding: 0px;
+    }
+
+    .date{
+        place-self: center;
+    }
+} 

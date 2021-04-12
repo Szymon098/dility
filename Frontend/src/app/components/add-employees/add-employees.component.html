@@ -1,27 +1,30 @@
 <div class="container">
-    <h3>Add Employee</h3>
+    <h2>Add Employee</h2>
+    <!-- name input -->
     <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
         <input matInput [(ngModel)]="name" required>
     </mat-form-field>
+    <!-- name empty error -->
     <p class="error" *ngIf="isNameEmpty">Name cannot be empty</p>
-    <br>
+    <!-- surname input -->
     <mat-form-field appearance="fill">
         <mat-label>Surname</mat-label>
         <input matInput [(ngModel)]="surname" required>
     </mat-form-field>
+    <!-- surname empty error -->
     <p class="error" *ngIf="isSurnameEmpty">Surname cannot be empty</p>
-    <br>
+    <!-- identifier input -->
     <mat-form-field appearance="fill">
         <mat-label>Identifier</mat-label>
         <input matInput type="number" [(ngModel)]="employeeId" required>
     </mat-form-field>
+    <!-- invalid identifier error -->
     <p class="error" *ngIf="isIdInvalid">Identifier must be 5-digit number</p>
-    <br>
-    <button mat-flat-button color="primary" (click)="onSubmitClick()">Submit</button>
-    <br>
-    <p *ngIf="this.displayEmployeeExistError" class="error" style="margin-top: 2%;">Employee with this identifier is
+    <!-- submit -->
+    <button mat-flat-button (click)="onSubmitClick()">Submit</button>
+    <!-- identifier occupied error -->
+    <p *ngIf="this.displayEmployeeExistError" class="error">Employee with this identifier is
         already added </p>
-
 
 </div>

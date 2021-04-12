@@ -1,5 +1,5 @@
 h1 span{
-    color: #28a745;
+    color: #2196F3;
 }
 /* navbar */
 .navbar{
@@ -29,7 +29,7 @@ h1 span{
 }
 
 .navbar a:hover{
-    border-bottom: #28a745 2px solid;
+    border-bottom: #2196F3 2px solid;
 }
 
 .navbar .logo{
@@ -50,9 +50,10 @@ h1 span{
 
 /* mobile */
 
-@media(max-width: 768px){
+@media(max-width: 840px){
     .navbar{
         font-size: 14px;
+        align-items: center;
     }
     .navbar .workday-date {
         margin: 0;

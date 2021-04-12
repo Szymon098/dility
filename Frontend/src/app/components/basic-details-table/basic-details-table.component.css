@@ -1,11 +1,12 @@
-  *{
-    font-size: 1.2rem;
+  * > .no-data-error{
+    font-size: 1.1vw;
   }
   .container{
     position: relative; 
     top: 100px;
     width: 80%;
     margin: auto;
+    padding-bottom: 50px;
   }
 
   table {
@@ -14,15 +15,17 @@
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
   }
-
-  @media(max-width: 768px){
-    *{
-      font-size: 0.7rem;
+  @media(max-width: 840px){
+    * > .no-data-error{
+      font-size: 0.8rem;
+    }
+    .date-picker{
+      text-align: center;
     }
     .container{
       width: 95%;
-
     }
+ 
   }
 
  /* angular tables */

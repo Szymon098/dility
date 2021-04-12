@@ -29,7 +29,6 @@ export class NavbarComponent implements OnInit {
     if (this.workdayDate) {
       let date = new Date(this.workdayDate);
       let fixedDate = date.getFullYear() + '.' + (date.getMonth() + 1) + '.' + date.getDate();
-
       if (fixedDate != '1.1.1')
         return true;
     }

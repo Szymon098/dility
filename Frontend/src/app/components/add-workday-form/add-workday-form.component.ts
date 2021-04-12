@@ -43,15 +43,17 @@ export class AddWorkdayFormComponent implements OnInit {
   }
 
   loadEmployees() {
-    this._employeesHttpService.getEmployees().then(result => {
-      this.displayError = false;
-      this.allEmployees = result;
-      this.displayLoading = false;
-    }).catch(err => {
-      this.displayError = true;
-      this.displayLoading = false;
-      this.error = 'Server connection issue'
-    });
+    setTimeout(() =>
+      this._employeesHttpService.getEmployees().then(result => {
+        this.displayError = false;
+        this.allEmployees = result;
+        this.displayLoading = false;
+      }).catch(err => {
+        this.displayError = true;
+        this.displayLoading = false;
+        this.error = 'Server connection issue'
+      })
+      , 500);
   }
 
   removeEmployee(employee: Employee) {
@@ -86,8 +88,6 @@ export class AddWorkdayFormComponent implements OnInit {
   onPlusButtonClick() {
     const dialogRef = this._dialog.open(EmployeesDialogTable,
       {
-        height: '85%',
-        width: '80%',
         data: this.allEmployees,
       });
 

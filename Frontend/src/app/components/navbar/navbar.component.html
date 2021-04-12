@@ -13,7 +13,7 @@
     </ul>
   </nav>
 
-  <div class="workday-date">
+  <div class="workday-date" *ngIf="isDateProper()">
     <h3>{{workdayDate | date: 'd.MM.yyyy'}}</h3>
   </div>
 </header>
