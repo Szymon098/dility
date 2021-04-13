@@ -4,12 +4,12 @@
 ######
 
 ### Menu: 
-* ##### [About](###about)
-* ##### [Run](###run)
-* ##### [Issues](###issues)
-* ##### [Sources](###sources)
-* ##### [Technologies and tools](###technologies-and-tools)
-* ##### [Contact](###contact)
+* ##### [About](### about)
+* ##### [Run](### run)
+* ##### [Issues](### issues)
+* ##### [Sources](### sources)
+* ##### [Technologies and tools](### technologies-and-tools)
+* ##### [Contact](### contact)
 
 ### About
 ##### Dility is a small web application, whose main feature is calculating daily efficiency of employees. Application calculates efficiency based on tasks, whose employees performed during workday. Every task has given time to perform, actually application supports three example tasks (add, delete, move). Initially, data from 03/14/2020 are created manually.
