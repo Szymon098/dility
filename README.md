@@ -19,7 +19,9 @@
 
 # Screenshots
 ![Screenshot](./Screenshots/scr1.PNG)
+<br />
 ![Screenshot](./Screenshots/scr2.PNG)
+<br />
 ![Screenshot](./Screenshots/scr3.PNG)
 
 # Run
