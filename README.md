@@ -5,6 +5,7 @@
 
 ### Menu: 
 * ##### [About](#about)
+* ##### [Screenshots](#screenshots)
 * ##### [Run](#run)
 * ##### [Issues](#issues)
 * ##### [Sources](#sources)
@@ -15,6 +16,11 @@
 ##### Dility is a small web application, whose main feature is calculating daily efficiency of employees. Application calculates efficiency based on tasks, whose employees performed during workday. Every task has given time to perform, actually application supports three example tasks (add, delete, move). Initially, data from 03/14/2020 are created manually.
 
 ##### Application is divided on two parts client side which is written with Angular and Backend (REST API) created with using ASP .NET Framework. Data is stored in MSSQL database and as JSON and CSV files, which are located in "Data" folder.
+
+# Screenshots
+![Screenshot](Screenshots/scr1.png)
+![Screenshot](Screenshots/scr2.png)
+![Screenshot](Screenshots/scr3.png)
 
 # Run
 ##### Run this application is provided via launching API and frontend parts, API can be simply run from IDE i.e 'Visual Studio'. Frontend part written in Angular can be started by running ``` ng serve``` command in command line.
