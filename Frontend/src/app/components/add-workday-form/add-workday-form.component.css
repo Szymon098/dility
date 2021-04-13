@@ -46,12 +46,6 @@
     width: 30%;
 }
 
-.extended-panel{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .day-note{
     color: red;
     padding: 0;
@@ -84,12 +78,23 @@
     opacity: 0.8;
 }
 
-mat-list{
-    width: 120px;
-    height: 200px;
-    overflow: auto; 
-    text-align: center;
+.header{
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
+mat-list{
+    display: flex; 
+    width: 80%;
+    overflow:auto; 
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+
 mat-list-item:hover{
     color: #fff;
     background: #2196F3;
@@ -130,8 +135,13 @@ mat-list-item:hover{
     .container .panel .panel-elements{
         padding: 0px;
     }
-
-    .date{
-        place-self: center;
+    .header{
+        flex-direction: column;
+    }
+    mat-list{
+        width: 90%;
+        height: 100px;
+        padding: 0;
+        align-self: center;
     }
 } 

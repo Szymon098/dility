@@ -30,6 +30,7 @@ export class AddWorkdayFormComponent implements OnInit {
   displayDateError: boolean = false;
   dayNote: string;
   displayLoading: boolean = true;
+  expandedEmployee: Employee;
 
   constructor(
     private _dialog: MatDialog,
@@ -95,20 +96,25 @@ export class AddWorkdayFormComponent implements OnInit {
       if (result) {
         this.allEmployees = this.allEmployees.filter(e => e !== result);
         this.choosenEmployees.push(result);
+        this.expandedEmployee = result;
         this.addUserActions(result);
       }
     });
   }
 
-  selected(event: MatSelectChange, employee: Employee) {
-    let userActions = this.usersActions.find(ua => ua.employeeId.toString() == employee.employeeId)
-    let action: Action = {
-      type: event.value,
+  setExpandedEmployee(employee: Employee) {
+    this.expandedEmployee = employee;
+  }
+  selected(event: MatSelectChange) {
+    if (this.expandedEmployee) {
+      let userActions = this.usersActions.find(ua => ua.employeeId.toString() == this.expandedEmployee.employeeId)
+      let action: Action = {
+        type: event.value,
+      }
+      userActions.actions.push(action);
+      event.source.value = null;
+      this.checkSubmitAccesibility();
     }
-    userActions.actions.push(action);
-    event.source.value = null;
-    this.checkSubmitAccesibility();
-
   }
 
   getUserActionsOfEmployee(employee: Employee): UsersActions {
