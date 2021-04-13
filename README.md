@@ -21,7 +21,7 @@
 ######
 # Issues
 - ##### Angular directs requests to API using ``` 44333 ``` port, so ensure you running API on this port.
-- ##### With first frontend run may occur problem with Angular version, which can be solved by running ``` npm install ```. Script should download and install required version of framework.
+- ##### With first run of frontend may occur problem with Angular version, which can be solved by running ``` npm install ```. Script should download and install required version of framework.
 
 # Sources
 * #### [Angular documentation](https://angular.io/docs)
