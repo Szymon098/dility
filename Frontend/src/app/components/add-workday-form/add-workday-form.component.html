@@ -1,88 +1,98 @@
 <mat-spinner class="loading" *ngIf="displayLoading"></mat-spinner>
 
 <div class="container flex-column" *ngIf="!displayError">
-    <div class="flex-column header">
-        <div class="flex-column">
-            <date-picker (changedWorkdayDate)="onDateChangeCreateDayActions($event)"></date-picker>
-            <p class="day-note" *ngIf="displayDateError">
-                {{dayNote}}
-            </p>
-        </div>
-        <div>
-            <mat-form-field appearance="fill" class="select">
-                <mat-label>Select employee actions</mat-label>
-                <mat-select name="action-type" required (selectionChange)="selected($event)">
-                    <mat-option *ngFor="let type of ActionType.values(); let i = index" [value]="type">
-                        {{i + 1}}. {{type}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div>
-    </div>
-    <div class="panel flex-column">
+    <h2>Add employees and assign them actions.</h2>
+
+    <div class="header panel">
         <mat-accordion>
-            <!-- header -panel -->
             <mat-expansion-panel hideToggle disabled>
-                <mat-expansion-panel-header>
-                    <div class="panel-elements flex-column">
+                <mat-expansion-panel-header class="panel-container">
+                    <div class="flex-row">
                         <p class="element">Name</p>
                         <p class="element">Surname</p>
                         <p class="element">Identifier</p>
-                        <p>
-                            <!-- remove button -->
-                        </p>
+                        <p></p>
                     </div>
                 </mat-expansion-panel-header>
-            </mat-expansion-panel>
-
-            <!-- no emloyees info panel -->
-            <mat-expansion-panel [hideToggle]="'true'" disabled *ngIf="choosenEmployees.length == 0">
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <p class="info">No employees added.</p>
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-            </mat-expansion-panel>
-
-            <!-- choosen employees panel -->
-            <mat-expansion-panel *ngFor="let employee of choosenEmployees; let index"
-                (afterExpand)="setExpandedEmployee(employee)" expanded>
-                <mat-expansion-panel-header>
-                    <div class="panel-elements flex-column">
-                        <p class="name element">{{employee.firstName}}</p>
-                        <p class="surname element">{{employee.lastName}}</p>
-                        <p class="identifier element">{{employee.employeeId}}</p>
-                        <button class="btn" mat-icon-button (click)="removeEmployee(employee)">
-                            <mat-icon class="remove">remove_circle</mat-icon>
-                        </button>
-                    </div>
-                </mat-expansion-panel-header>
-                <!-- extension -->
-                <h3 *ngIf="getUserActionsOfEmployee(employee).actions.length == 0">Add actions from select</h3>
-                <mat-list *ngIf="employee" fxLayout="row">
-                    <h3 *ngIf="getUserActionsOfEmployee(employee).actions.length != 0">User
-                        Actions({{getUserActionsOfEmployee(employee).actions.length}}): </h3>
-                    <mat-list-item *ngFor="let action of getUserActionsOfEmployee(employee).actions; let i = index"
-                        (click)="removeActionFromUserActionsOnPosition(employee, i)">
-                        <span>{{i + 1}}. {{action.type}}</span>
-                    </mat-list-item>
-                </mat-list>
             </mat-expansion-panel>
         </mat-accordion>
     </div>
-    <!-- add employee button -->
-    <div>
-        <button class="btn add-employee" mat-mini-fab>
-            <mat-icon class="add-icon" (click)="onPlusButtonClick();">add</mat-icon>
+
+    <mat-accordion class="employees-container flex-column panel">
+        <!-- employees panel -->
+        <mat-expansion-panel *ngFor="let employee of choosenEmployees; let index"
+            (afterExpand)="setExpandedEmployee(employee)" expanded>
+            <mat-expansion-panel-header>
+                <div class="flex-row">
+                    <p class="name element">{{employee.firstName}}</p>
+                    <p class="surname element">{{employee.lastName}}</p>
+                    <p class="identifier element">{{employee.employeeId}}</p>
+                </div>
+            </mat-expansion-panel-header>
+
+            <!-- expanded part of panel -->
+            <div class="grid-container extended-panel">
+                <div class="select-container col1">
+                    <div class="column-splitter">
+                        <h3>Assign performed actions</h3>
+                    </div>
+                    <div class="column-splitter">
+                        <mat-form-field appearance="fill" class="select">
+                            <mat-label>Select employee actions</mat-label>
+                            <mat-select name="action-type" required (selectionChange)="selected($event)">
+                                <mat-option *ngFor="let type of ActionType.values(); let i = index" [value]="type">
+                                    {{i + 1}}. {{type}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="column-splitter">
+                        <h3>Assigned actions:
+                            ({{getUserActionsOfEmployee(employee).actions.length}}): </h3>
+                    </div>
+                    <div class="column-splitter">
+                        <button mat-raised-button class="btn" color="primary" (click)="removeEmployee(employee)">
+                            Remove this employee
+                        </button>
+                    </div>
+                    <div class="column-splitter">
+                        <button mat-raised-button class="btn" color="primary"
+                            (click)="clearEmployeeUserActions(employee)">
+                            Clear actions
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col3 panel">
+                    <h3 *ngIf="getUserActionsOfEmployee(employee).actions.length > 0">Click on item to remove</h3>
+                    <div class="actions-list">
+                        <mat-list *ngIf="employee" fxLayout="row">
+                            <mat-list-item
+                                *ngFor="let action of getUserActionsOfEmployee(employee).actions; let i = index"
+                                (click)="removeActionFromUserActionsOnPosition(employee, i)">
+                                <span>{{i + 1}}. {{action.type}}</span>
+                            </mat-list-item>
+                        </mat-list>
+                    </div>
+                </div>
+            </div>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <!--add employees panels -->
+    <div class="save-btn">
+        <button mat-raised-button class="btn emp" color="primary" (click)="onPlusButtonClick();">
+            Add employee
         </button>
-    </div>
-    <!-- submit form button -->
-    <div class="add-btn">
-        <button [disabled]="disableSubmit" class="submit add btn" mat-raised-button (click)="onSubmit()">
-            Add
+        <button class="btn save" [disabled]="disableSubmit" mat-raised-button (click)="onSubmit()">
+            Save workday
         </button>
     </div>
 </div>
+
 <div *ngIf="displayError" class="no-data-error">
     <h1>
         {{error}}

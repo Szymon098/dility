@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
     imports: [
@@ -35,6 +36,7 @@ import { MatMenuModule } from '@angular/material/menu';
         MatProgressSpinnerModule,
         MatSnackBarModule,
         MatMenuModule,
+        MatTreeModule,
     ],
 })
 

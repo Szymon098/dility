@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ɵEMPTY_ARRAY } from '@angular/core';
 import { Employee } from '../../models/employee';
 import { MatDialog } from '@angular/material/dialog';
 import { HttpEmployeeService } from '../../services/employee.http.service'
@@ -10,7 +10,9 @@ import { MatSelectChange } from '@angular/material/select';
 import { EmployeesWithDate } from '../../dtos/employees-with-date';
 import { Router } from '@angular/router';
 import { EmployeesDialogTable } from '../employees-dialog/employee-list.component';
+import { DateDialog } from '../date-dialog/date-dialog';
 import { HttpWorkdayService } from '../../services/workday.http.service';
+
 
 @Component({
   selector: 'app-add-workday-form',
@@ -27,8 +29,6 @@ export class AddWorkdayFormComponent implements OnInit {
   disableSubmit = true;
   displayError = true;
   error: string;
-  displayDateError: boolean = false;
-  dayNote: string;
   displayLoading: boolean = true;
   expandedEmployee: Employee;
 
@@ -117,27 +117,16 @@ export class AddWorkdayFormComponent implements OnInit {
     }
   }
 
+  clearEmployeeUserActions(employee) {
+    let currentActions = this.getUserActionsOfEmployee(employee);
+    currentActions.actions = [];
+    this.checkSubmitAccesibility();
+  }
   getUserActionsOfEmployee(employee: Employee): UsersActions {
     return this.usersActions.find(ua => ua.employeeId.toString() == employee.employeeId)
   }
 
-  async onDateChangeCreateDayActions(date: Date) {
-
-    if (date > new Date()) {
-      this.displayDateError = true;
-      this.dayNote = "That day has not yet taken place";
-      this.checkSubmitAccesibility();
-
-      return;
-    }
-
-    const result = await this._workdayHttpService.isWorkdayExist(date);
-    this.displayDateError = result;
-
-    if (this.displayDateError) {
-      this.dayNote = "The day has already been added"
-    }
-
+  createDayActions(date: Date) {
     let dayActions: DayActions = {
       date: date,
       usersActions: this.usersActions,
@@ -146,7 +135,12 @@ export class AddWorkdayFormComponent implements OnInit {
     this.checkSubmitAccesibility();
   }
 
-  async onSubmit() {
+  onSubmit() {
+    this.openDateDialog();
+
+  }
+
+  async sendEmployeesWithDate() {
     const employeesWithDate: EmployeesWithDate = {
       date: this.dayActions.date,
       employees: this.choosenEmployees,
@@ -160,8 +154,23 @@ export class AddWorkdayFormComponent implements OnInit {
     }, 800)
   }
 
+  openDateDialog(): void {
+    const dialogRef = this._dialog.open(DateDialog, {
+      width: '400px',
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result != null) {
+        this.createDayActions(result);
+        this.sendEmployeesWithDate();
+      }
+      else {
+        alert("Choose proper date");
+      }
+    });
+  }
+
   checkSubmitAccesibility() {
-    if (this.dayActions && this.usersActions.length > 0 && this.checkIfEveryUserActionsHasActions() && !this.displayDateError) {
+    if (this.usersActions.length > 0 && this.checkIfEveryUserActionsHasActions()) {
       this.disableSubmit = false;
       return;
     }

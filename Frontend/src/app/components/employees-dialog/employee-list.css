@@ -3,8 +3,11 @@ table{
     table-layout: fixed;
     margin: auto;
     width: 80%;
+    text-align: center;
 }
-
+th.mat-header-cell{
+text-align: center;
+}
 .mat-typography{
     padding-bottom: 10px;
 }
@@ -25,7 +28,8 @@ mat-header-cell{
 
 @media(max-width: 840px){ 
     .table{
-        width: 100%;        
+        width: 100%;  
+        text-align: unset;      
     } 
 
 .mat-column-Fullname {
@@ -51,6 +55,7 @@ mat-header-cell{
         border-bottom-style: none;
     }
     th.mat-header-cell{
+        text-align: unset;      
         border-bottom-style: none;
     }
 }

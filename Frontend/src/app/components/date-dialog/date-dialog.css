@@ -1,0 +1,12 @@
+.container{
+    margin: auto;
+    text-align: center;
+}
+
+.buttons{
+    float: right;
+}
+
+.day-note{
+    color: red;
+}

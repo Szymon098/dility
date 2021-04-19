@@ -26,6 +26,7 @@ import { BasicDetailsTable } from './components/basic-details-table/basic-detail
 import { ExtendedDetailsRow } from './components/basic-details-table/extended-details-row/extended-details-row.component';
 import { AddEmployeesComponent } from './components/add-employees/add-employees.component';
 import { EmployeesDialogTable } from './components/employees-dialog/employee-list.component';
+import { DateDialog } from './components/date-dialog/date-dialog';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { DatePicker } from './components/date-picker/date-picker.component';
@@ -41,6 +42,7 @@ import { DatePicker } from './components/date-picker/date-picker.component';
     EmployeesDialogTable,
     AddEmployeesComponent,
     AboutComponent,
+    DateDialog,
   ],
   imports: [
     BrowserModule,

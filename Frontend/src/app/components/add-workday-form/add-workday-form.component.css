@@ -1,125 +1,124 @@
-* > btn{
-    color: #333;
-    font-size: 1.1vw;
+/* containers */
+.container{
+    position: relative;
+    width: 60%;
+    top: 200px;
+    margin: auto;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
 }
 
 .flex-column{
     display: flex;
     flex-direction: column;
 }
+.panel-container{
+    width: 100%;
+    color: #333;    
+}
 
-.container{
-    position: relative;
-    width: 60%;
+.employees-container{
     margin: auto;
-    align-items: center;
-    align-content:space-between;
     text-align: center;
-    top: 200px;
-    padding: 20px;
-    gap: 20px;
+    padding: 0 20px 20px 20px;
 }
 
-.container .panel{
-    width: 100%;
+/* grid */
+.grid-container{
+    padding: 20px 10px 20px 10px;
+    height: 200px;
+    display: grid;
+    column-gap: 50px;
+}
+
+.col1{
+    grid-column: 1;
+    align-self: center;
+}
+
+.col2{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    align-self: center;
     justify-content: center;
-    margin: auto;
-}
-
-.date{
-    place-self: start;
-}
-
-.container .panel .panel-elements{
-    width: 100%;
-    flex-direction: row;
     align-items: center;
-    padding: 20px;
+}
+
+.col3{
+    grid-column: 3;
+}
+.col2 button{
+    display: block;
+    width: 170px;
+}
+
+.column-splitter{
+    padding: 5px 0 5px 0;
+    text-align: center;
+}
+/* panels */
+.panel{
+    width: 90%;
     margin: auto;
 }
-
-.container .panel .panel-elements .remove-btn{
-    color: #1565C0;
-    margin-left: auto;
-}
-.container .panel .panel-elements .element{
-    width: 30%;
+.actions-list{
+    height: 150px;
+    overflow: auto;
 }
 
-.day-note{
-    color: red;
-    padding: 0;
+.add-employee-panel{
+    margin: auto;
+    width: 100%;
 }
+/* utilieties */
 
-.flex-left{
-    place-self: start;
-}
-
-.remove{
-    color: rgb(170, 4, 4);
-}
-
-.add{
-    background: #28a745 ;
+mat-list-item:hover{
+    background: #CCC;
     color: #fff;
-}
-
-.add-icon{
-    color: #fff;
-}
-
-.add-btn{
-    margin-left:auto;
-}
-.add-employee{
-    background-color:#2196F3;
-}
-.btn:hover:enabled{
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .header{
-    width: 80%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-mat-list{
-    display: flex; 
-    width: 80%;
-    overflow:auto; 
-    margin: auto;
     text-align: center;
-    padding: 30px;
+    padding: 20px 20px 10px 20px;
 }
 
-
-mat-list-item:hover{
-    color: #fff;
-    background: #2196F3;
-    opacity: 0.3;
+h2, h1{
+    padding: 0 0 30px 0;
+    text-align: center;
+    background : #fff;
 }
 
-.tip{
-    color: #333;
-    font-size: 12px;
-    opacity: 0.8;
+.element{
+    width: 30%;
+    text-align: center;
 }
 
-.info{
+.save-btn{
+    display: flex;
+    width: 80%;
     margin: auto;
-    color: #333;
-    padding: 10px;
+    padding: 20px 0 20px 0;
+    gap: 30px;
+    justify-content: flex-end;
 }
 
-.title p{
-    font-size: 15px;
-    color: black;
+.save-btn button.save:enabled{
+    background: rgb(68, 124, 31);
+    color: #fff;
+}
+
+.btn:hover:enabled{
     opacity: 0.8;
 }
 /* mobile */
- @media(max-width: 840px){ 
+@media(max-width: 840px){ 
     .container, .container .panel{
         width: 95%;
         padding: 0px;
@@ -135,13 +134,17 @@ mat-list-item:hover{
     .container .panel .panel-elements{
         padding: 0px;
     }
-    .header{
+    .extended-panel{
+        height: 500px;
+        display: flex;
         flex-direction: column;
     }
     mat-list{
-        width: 90%;
+        width: 40%;
         height: 100px;
         padding: 0;
         align-self: center;
+        text-align: center;
+        margin: auto;
     }
-} 
+}  
