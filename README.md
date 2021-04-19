@@ -18,17 +18,20 @@
 ##### Application is divided on two parts client side which is written with Angular and Backend (REST API) created with using ASP .NET Framework. Data is stored in MSSQL database and as JSON and CSV files, which are located in "Data" folder.
 
 # Screenshots
-<div style="text-align:center">
-![Screenshot](./Screenshots/scr1.PNG)
-<br />
-![Screenshot](./Screenshots/scr2.PNG)
-<br />
-![Screenshot](./Screenshots/scr3.PNG)
-</div>
+<p align="center">
+  <img src="https://github.com/SzymonSliwinski/Dility/blob/master/Screenshots/scr1.PNG"/>
+</p>
+<p align="center">
+  <img src="https://github.com/SzymonSliwinski/Dility/blob/master/Screenshots/scr2.PNG"/>
+</p>
+<p align="center">
+  <img src="https://github.com/SzymonSliwinski/Dility/blob/master/Screenshots/scr3.PNG"/>
+</p>
 
 # Run
 ##### Run this application is provided via launching API and frontend parts, API can be simply run from IDE i.e 'Visual Studio'. Frontend part written in Angular can be started by running ``` ng serve``` command in command line.
 ######
+
 # Issues
 - ##### Angular directs requests to API using ``` 44333 ``` port, so ensure you running API on this port.
 - ##### With first run of frontend may occur problem with Angular version, which can be solved by running ``` npm install ```. Script should download and install required version of framework.
