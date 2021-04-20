@@ -120,14 +120,10 @@ h2, h1{
 /* mobile */
 @media(max-width: 840px){ 
     .container, .container .panel{
-        width: 95%;
-        padding: 0px;
+        width: 90%;
         font-size: 1rem;
     }
 
-    .container .panel{
-        width: 100%;
-    }
     .extended-panel{
         flex-direction: column;
     }
